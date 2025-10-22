@@ -155,6 +155,7 @@ HRESULT CreateGraphicsResources(HWND hwnd) {
         }
 
         if (SUCCEEDED(hr)) {
+            g_pRT->SetDpi(96.0f, 96.0f);
             g_pRT->CreateSolidColorBrush(D2D1::ColorF(0.2f, 0.2f, 0.2f), &g_pGridBrush);
             g_pRT->CreateSolidColorBrush(D2D1::ColorF(0, 0, 0), &g_pBlackBrush);
             g_pRT->CreateSolidColorBrush(D2D1::ColorF(1, 1, 1), &g_pWhiteBrush);
